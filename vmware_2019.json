@@ -79,13 +79,6 @@
       "restart_timeout": "1h"
   }
   ],
-  "post-processors": [
-    {
-      "type": "vagrant",
-      "output": "windows2019min-{{.Provider}}.box",
-      "vagrantfile_template": "vagrantfile-windows.template"
-    }
-  ],
   "variables": {
     "iso_checksum": "57FAF4A2EA4484CFDF5E964C539313C061C4D9CAC474E723D60405F2EA02D570",
     "iso_url": "file://C:/ISO/Server2019.iso"
