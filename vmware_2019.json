@@ -2,7 +2,7 @@
   "builders": [
     {
       "type": "vmware-iso",
-      "vm_name": "Windows_2019",
+      "vm_name": "win19",
       "cpus": 2,
       "memory": 2048,
       "disk_size": 40000,
@@ -53,6 +53,29 @@
           "--cpus",
           "2"
         ]
+      ]
+    },
+    {
+      "type": "hyperv-iso",
+      "vm_name": "win19",
+      "cpu": 2,
+      "memory": 2048,
+      "disk_size": 40000,
+      "disk_type_id": "1",
+      "boot_wait": "2m",
+      "guest_os_type": "windows9srv-64",
+      "iso_url": "{{ user `iso_url` }}",
+      "iso_checksum": "{{ user `iso_checksum` }}",
+      "iso_checksum_type": "sha256",
+      "headless": true,
+      "network": "nat",
+      "communicator": "winrm",
+      "winrm_username": "huzzey",
+      "winrm_password": "huzzey",
+      "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
+      "floppy_files": [
+        "./answer_files/2019/Autounattend.xml",
+        "./scripts/winrm.ps1"
       ]
     }
   ],
