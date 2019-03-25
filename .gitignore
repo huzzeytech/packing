@@ -2,4 +2,5 @@
 packerlog.txt
 packer.exe
 /output-vmware-iso
+/output-virtualbox-iso
 
