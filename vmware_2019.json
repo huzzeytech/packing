@@ -66,7 +66,6 @@
       "boot_command": [
         "a<wait>a<wait>a"
       ],
-      "guest_os_type": "windows9srv-64",
       "iso_url": "{{ user `iso_url` }}",
       "iso_checksum": "{{ user `iso_checksum` }}",
       "iso_checksum_type": "sha256",
