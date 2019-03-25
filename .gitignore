@@ -1,3 +1,5 @@
 .gitignore
 packerlog.txt
 packer.exe
+/output-vmware-iso
+
